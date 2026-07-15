@@ -60,7 +60,7 @@ export async function POST(req: NextRequest) {
     .from('user_company_roles')
     .select('user_id')
     .eq('company_id', companyId)
-    .eq('role', 'owner')
+    .eq('role', 'subscription_holder')
     .single();
 
   if (ownerRole) {

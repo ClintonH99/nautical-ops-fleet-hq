@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
   const { error: roleError } = await supabaseAdmin.from('user_company_roles').insert({
     user_id: userId,
     company_id: company.id,
-    role: 'owner',
+    role: 'subscription_holder',
   });
 
   if (roleError) {
